@@ -25,14 +25,14 @@ console.log(data.supported_codes.slice(0,10));
 ,[])
   return (
     <div className='relative w-full  mb-4'>
-      <div className='relative' onClick={()=>{setIsDropdown(!isDropdown)}}> 
-      <button className='bg-gray-300 text-sm w-full text-left px-0 sm:px-2' onClick={()=>{setIsOpen(!isOpen)}}>{selectedCurrency}</button>
+      <div className='relative' onClick={()=>{setIsDropdown(!isDropdown);}}> 
+      <button className='bg-gray-300 text-sm w-full text-left px-0 sm:px-2' >{selectedCurrency}</button>
       <IoMdArrowDropdown className={`absolute top-1 right-1 ${isDropdown?"block":"hidden"} cursor-pointer`} />
       <IoMdArrowDropup className={`absolute top-1 right-1 ${isDropdown?"hidden":"block"} cursor-pointer`} />
 
       
       </div>
-      <ul className={`absolute w-full list-none left-0 top-100% ${isOpen?"block":"hidden"}`} >
+      <ul className={`absolute w-full list-none left-0 top-100% ${isDropdown?"hidden":"block"}`} >
         {
           currencies.map((currency,index)=><li className=' border-2 text-sm border-gray-500 bg-gray-600 hover:bg-gray-400 cursor-pointer ' onClick={()=>{setIsOpen(false);currencySetter(currency.replace(/\s+/g, ""))}}>{currency}</li>)
         }

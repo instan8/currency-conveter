@@ -28,7 +28,7 @@ function App() {
               <DropDown  selectedCurrency={fromCurrency} currencySetter={setFromCurrency}/>
               </div>
               <FaArrowAltCircleRight className='self-center'/>
-          <div className='w-[30%] text-sm'> 
+          <div className='w-[30%] text-sm sm:text-lg'> 
             <p className='font-semibold text-sm sm:text-lg'>To:</p>
               <DropDown selectedCurrency={toCurrency} currencySetter={setToCurrency}/>
               </div>
