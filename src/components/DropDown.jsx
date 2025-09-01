@@ -34,7 +34,7 @@ console.log(data.supported_codes.slice(0,10));
       </div>
       <ul className={`absolute w-full list-none left-0 top-100% ${isDropdown?"hidden":"block"}`} >
         {
-          currencies.map((currency,index)=><li className=' border-2 text-sm border-gray-500 bg-gray-600 hover:bg-gray-400 cursor-pointer ' onClick={()=>{setIsDropdown(false);currencySetter(currency.replace(/\s+/g, ""))}}>{currency}</li>)
+          currencies.map((currency,index)=><li key={index} className=' border-2 text-sm border-gray-500 bg-gray-600 hover:bg-gray-400 cursor-pointer ' onClick={()=>{setIsDropdown(true);currencySetter(currency.replace(/\s+/g, ""))}}>{currency}</li>)
         }
         
       </ul>
